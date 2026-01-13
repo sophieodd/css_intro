@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans Georgian', sans-serif;
+    background-color: #F5F5F7;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-size:36px;
+}
+.navigation {
+    display:flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: left;
+    max-width: 1240px;
+    height:70px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h2{
+    font-size:24px;
+    font-weight: bold;
+    color:#5B47D1;
+}
+
+.navigation ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation a {
+    color:#000000;
+    font-size:24px;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url(./assets/Hero.svg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#FFFFFF;
+    text-align: center;
+    margin-top:37px;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:700;
+    color:#FFFFFF;
+    text-align:center;
+}
+
+#cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    justify-content: center;
+    gap:29px;
+    margin:55px 0 150px 0;
+}
+
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width:360px;    
+    height:465px;
+    background: #fff;
+}
+
+
+.card-img{
+    width:100%;
+    height:240px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 0 19.5px;
+}
+.card-info h3 {
+    font-size:22px;
+    font-weight:600;
+    padding-bottom:6px;
+}
+
+.card-info p{
+    font-size:15px;
+    padding-bottom:18px;
+}
+
+.card-meta {
+    display: flex;
+    gap: 28px;        
+    font-size: 13px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+footer{
+    background-color: #252424;
+    align-items: center;
+}
+
+.footer-nav{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    margin: 0 auto; 
+    gap: 40px;
+    width: 1240px;
+    padding:40px;
+    justify-content: flex-start;
+}
+
+.footer-nav div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 296px;    
+    align-items: flex-start;
+    text-align: left;  
+}
+
+.footer-nav div:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.footer-nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;  
+}
+
+.footer-nav li{
+    list-style-type: none;
+}
+
+.footer-nav a,
+.footer-nav li {
+    color:#A1A1A6;
+    font-size:14px;
+    padding-bottom:11px;
+    text-decoration: none;
+}
+.footer-nav p{
+    color:#A1A1A6;
+    font-size:14px;
+}
+
+.nav-title {
+    font-size:20px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.copyright {
+    background-color: #020202;
+    color:#86868B;
+    font-size:13px;
+    display:block;
+    height:55px;
+    text-align: center;
+    padding: 20px;
+}
+
+.navigation,
+.footer-nav {
+    max-width: 1240px;
+    width: 100%;
+}
+
+
+/*responsive styles - thanks to GPT*/
+@media (max-width: 1024px) {
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .navigation a {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        padding: 0 20px;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 18px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        margin: 40px 0 80px;
+    }
+
+    .card-item {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .footer-nav {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-nav div:nth-child(3) {
+        grid-column: auto;
+    }
+}
+
